@@ -1,17 +1,19 @@
 import axios from 'axios';
-import {getAPIKey} from "../config";
+import {getAPIKey, getHost} from "../config";
 
 export async function getAllInvitations() {
     const apiKey = getAPIKey()
-    const res = await axios.get(`http://localhost:8081/api/v1/invitations?api_key=${apiKey}`);
+    const host = getHost()
+    const res = await axios.get(`${host}/api/v1/invitations?api_key=${apiKey}`);
     console.log(res);
     return res.data;
 }
 
 export async function createInvitation(name, guestCount) {
     const apiKey = getAPIKey()
+    const host = getHost()
     await axios.post(
-        `http://localhost:8081/api/v1/invitations?api_key=${apiKey}`,
+        `${host}/api/v1/invitations?api_key=${apiKey}`,
         {
             name,
             guest_count: guestCount

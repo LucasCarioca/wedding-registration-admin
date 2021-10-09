@@ -7,11 +7,12 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import {Link} from "react-router-dom";
+import Login from "./Login";
 
 function NavBar() {
     return (
         <Box sx={{flexGrow: 1}}>
-            <AppBar position="static">
+            <AppBar position="static" color="transparent">
                 <Toolbar>
                     <IconButton
                         size="large"
@@ -25,7 +26,8 @@ function NavBar() {
                     <Typography variant="h6" component="div" sx={{flexGrow: 1}}>
                         Admin
                     </Typography>
-                    <Link component={Button} color="inherit" to="/home">Home</Link>
+                    <Login/>
+                    <Link component={Button} color="inherit" to="/">Home</Link>
                     <Link component={Button} color="inherit" to="/invitations">Invitations</Link>
                 </Toolbar>
             </AppBar>

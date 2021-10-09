@@ -38,7 +38,7 @@ function NewInvitationForm({onSubmit}) {
                             variant="contained"
                             color="primary"
                             size="large"
-                            style={{margin: "1rem"}}
+                            style={{margin: "1.5rem"}}
                         >
                             Add
                         </Button>
