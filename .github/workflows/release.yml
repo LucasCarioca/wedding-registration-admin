@@ -1,6 +1,6 @@
 name: Release
 on:
-  workflow_dispatch:
+  release:
 env:
   VERSION: ${{ github.event.release.tag_name }}
   REGISTRY: ghcr.io
