@@ -6,7 +6,7 @@ env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
 jobs:
-  release:
+  build-release:
     runs-on: ubuntu-latest
     strategy:
       matrix:
