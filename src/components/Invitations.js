@@ -19,7 +19,7 @@ function Invitations() {
         <Container style={{height: "600px"}}>
             <Typography variant="h1">Invitations</Typography>
             <NewInvitationForm onSubmit={refresh}/>
-            <InvitationList list={invitationList}/>
+            <InvitationList list={invitationList} onChange={refresh}/>
         </Container>
     )
 }

@@ -9,7 +9,9 @@ export default function App() {
         <Router>
             <div>
                 <NavBar/>
-                <Routes/>
+                <div style={{marginTop: "2rem"}}>
+                    <Routes/>
+                </div>
             </div>
         </Router>
     );

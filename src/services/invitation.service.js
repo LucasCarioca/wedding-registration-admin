@@ -5,7 +5,6 @@ export async function getAllInvitations() {
     const apiKey = getAPIKey()
     const host = getHost()
     const res = await axios.get(`${host}/api/v1/invitations?api_key=${apiKey}`);
-    console.log(res);
     return res.data;
 }
 
@@ -19,4 +18,10 @@ export async function createInvitation(name, guestCount) {
             guest_count: guestCount
         }
     );
+}
+
+export async function deleteInvitation(id) {
+    const apiKey = getAPIKey()
+    const host = getHost()
+    await axios.delete(`${host}/api/v1/invitations/${id}?api_key=${apiKey}`);
 }
