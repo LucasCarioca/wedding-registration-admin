@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Container, Typography} from "@mui/material";
+import {Container} from "@mui/material";
 import InvitationList from "./InvitationList";
 import NewInvitationForm from "./NewInvitationForm";
 import {getAllInvitations} from "../services/invitation.service";
@@ -17,7 +17,7 @@ function Invitations() {
     }, [reload]);
     return (
         <Container style={{height: "600px"}}>
-            <Typography variant="h1">Invitations</Typography>
+            <h1>Invitations</h1>
             <NewInvitationForm onSubmit={refresh}/>
             <InvitationList list={invitationList} onChange={refresh}/>
         </Container>
