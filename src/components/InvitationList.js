@@ -9,7 +9,7 @@ function InvitationList({list, onChange}) {
         {field: "id", headerName: "ID", width: 30},
         {field: "name", headerName: "Name", width: 200},
         {field: "guest_count", headerName: "Guest Count", width: 200},
-        {field: "registration_key", headerName: "Registration Key", width: 250},
+        {field: "registration_key", headerName: "Registration Key", width: 400},
     ];
     const handleSelection = (s) => {
         setSelectedList(s)
