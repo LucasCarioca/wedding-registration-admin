@@ -6,18 +6,18 @@ function Login() {
     const [key, setKey] = useState('');
     const [keyInput, setKeyInput] = useState('');
     useEffect(() => {
-        setKey(getAPIKey())
+        setKey(getAPIKey());
     }, [])
     const submit = key => {
-        console.log(key)
-        setAPIKey(key)
-        setKey(getAPIKey())
+        console.log(key);
+        setAPIKey(key);
+        setKey(getAPIKey());
         window.location.reload(false);
     }
 
     const clearKey = () => {
-        setAPIKey('')
-        setKey(getAPIKey())
+        setAPIKey('');
+        setKey(getAPIKey());
         window.location.reload(false);
     }
     if (key && key.length > 0) return (
@@ -49,7 +49,7 @@ function Login() {
                 Save Key
             </Button>
         </form>
-    )
+    );
 }
 
 export default Login;

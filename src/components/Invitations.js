@@ -14,8 +14,8 @@ function Invitations() {
         getAllInvitations().then(data => {
             setInvitationList(data);
         }).catch(error => {
-            console.error(error)
-            setError(error.message)
+            console.error(error);
+            setError(error.message);
         }).finally(() => setLoading(false));
     }, [reload]);
     if (error !== '') {
@@ -24,16 +24,16 @@ function Invitations() {
                 <h1>Error</h1>
                 <p>{error}</p>
             </Container>
-        )
+        );
     }
-    if (loading) return <LinearProgress/>
+    if (loading) return <LinearProgress/>;
     return (
         <Container style={{height: "600px"}}>
             <h1>Invitations</h1>
             <NewInvitationForm onSubmit={refresh}/>
             <InvitationList list={invitationList} onChange={refresh}/>
         </Container>
-    )
+    );
 }
 
 export default Invitations;

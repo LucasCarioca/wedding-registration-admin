@@ -6,7 +6,7 @@ import {createInvitation} from "../services/invitation.service";
 function NewInvitationForm({onSubmit}) {
     const submit = (values) => {
         createInvitation(values.name, values.guestCount).then(() => {
-            onSubmit()
+            onSubmit();
         }).catch(error => console.error(error));
     }
     return (
@@ -54,7 +54,7 @@ function NewInvitationForm({onSubmit}) {
                 )}
             </Formik>
         </Container>
-    )
+    );
 }
 
 export default NewInvitationForm;
