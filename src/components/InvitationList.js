@@ -4,7 +4,7 @@ import {DataGrid} from "@mui/x-data-grid";
 import {deleteInvitation} from "../services/invitation.service";
 
 function InvitationList({list, onChange}) {
-    const [selectedList, setSelectedList] = useState([])
+    const [selectedList, setSelectedList] = useState([]);
     const columns = [
         {field: "id", headerName: "ID", width: 30},
         {field: "name", headerName: "Name", width: 200},
@@ -12,7 +12,7 @@ function InvitationList({list, onChange}) {
         {field: "registration_key", headerName: "Registration Key", width: 400},
     ];
     const handleSelection = (s) => {
-        setSelectedList(s)
+        setSelectedList(s);
     }
 
     const deleteSelection = () => {
@@ -20,7 +20,7 @@ function InvitationList({list, onChange}) {
             deleteInvitation(i).finally(() => {
                 onChange()
             })
-        })
+        });
     }
 
     return (
@@ -37,7 +37,7 @@ function InvitationList({list, onChange}) {
                 onSelectionModelChange={handleSelection}
             />
         </Container>
-    )
+    );
 }
 
 export default InvitationList;
