@@ -14,5 +14,6 @@ rules: {
   "require-jsdoc": 0,
   "react/prop-types": 0,
   "comma-dangle": 0,
-  "indent": ["error", 2]
+  "indent": ["error", 2],
+  "max-len": 0
 }
