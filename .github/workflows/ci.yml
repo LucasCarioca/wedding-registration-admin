@@ -1,0 +1,23 @@
+name: CI
+on:
+  push:
+env:
+  VERSION: ${{ github.event.release.tag_name }}
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: Install dependencies
+        run: yarn install
+      - name: Lint check
+        run: yarn lint
+      - name: Build project
+        run: yarn build
+      
