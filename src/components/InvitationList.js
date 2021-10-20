@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import {Container, Button} from "@mui/material";
-import {DataGrid} from "@mui/x-data-grid";
-import {deleteInvitation} from "../services/invitation.service";
+import {Container, Button} from '@mui/material';
+import {DataGrid} from '@mui/x-data-grid';
+import {deleteInvitation} from '../services/invitation.service';
 
 function InvitationList({list, onChange}) {
   const [selectedList, setSelectedList] = useState([]);
