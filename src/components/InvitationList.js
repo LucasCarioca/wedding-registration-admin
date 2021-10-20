@@ -6,26 +6,26 @@ import {deleteInvitation} from '../services/invitation.service';
 function InvitationList({list, onChange}) {
   const [selectedList, setSelectedList] = useState([]);
   const columns = [
-    {field: "id", headerName: "ID", width: 30},
-    {field: "name", headerName: "Name", width: 200},
-    {field: "guest_count", headerName: "Guest Count", width: 200},
-    {field: "registration_key", headerName: "Registration Key", width: 400},
+    {field: 'id', headerName: 'ID', width: 30},
+    {field: 'name', headerName: 'Name', width: 200},
+    {field: 'guest_count', headerName: 'Guest Count', width: 200},
+    {field: 'registration_key', headerName: 'Registration Key', width: 400},
   ];
   const handleSelection = (s) => {
     setSelectedList(s);
-  }
+  };
 
   const deleteSelection = () => {
     selectedList.forEach(i => {
       deleteInvitation(i).finally(() => {
-        onChange()
-      })
+        onChange();
+      });
     });
-  }
+  };
 
   return (
-    <Container style={{height: "600px"}}>
-      <div style={{display: "flex", justifyContent: "flex-end", padding: "1rem"}}>
+    <Container style={{height: '600px'}}>
+      <div style={{display: 'flex', justifyContent: 'flex-end', padding: '1rem'}}>
         {selectedList.length > 0 ?
           <Button
             variant="contained"
