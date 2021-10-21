@@ -26,7 +26,14 @@ function Invitations() {
       </Container>
     );
   }
-  if (loading) return <LinearProgress/>;
+  if (loading) {
+    return (
+      <Container style={{height: '600px'}}>
+        <h1>Loading</h1>
+        <LinearProgress/>
+      </Container>
+    );
+  }
   return (
     <Container style={{height: '600px'}}>
       <h1>Invitations</h1>
