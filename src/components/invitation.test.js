@@ -7,10 +7,10 @@ jest.mock('../services/invitation.service', () => ({
 }));
 
 describe('invitations component', function() {
-  it('should render the component', function() {
+  it('should render the component', async function() {
     getAllInvitations.mockResolvedValue([]);
     render(<Invitations/>);
-    screen.getByText(/Loading/);
-    screen.findByText(/Invitations/);
+    expect(screen.getByText(/Loading/)).toBeInTheDocument();
+    expect(await screen.findByText(/Invitations/)).toBeInTheDocument();
   });
 });
