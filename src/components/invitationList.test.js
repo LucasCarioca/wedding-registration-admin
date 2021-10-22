@@ -1,6 +1,6 @@
 import React from 'react';
 import {render, screen, waitFor} from '@testing-library/react';
-import InvitationList from './invitationList';
+import InvitationList from './InvitationList';
 import {deleteInvitation} from '../services/invitation.service';
 jest.mock('../services/invitation.service', () => ({
   deleteInvitation: jest.fn()

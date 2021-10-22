@@ -1,4 +1,4 @@
-import Invitations from './invitations';
+import Invitations from './Invitations';
 import React from 'react';
 import {render, screen} from '@testing-library/react';
 import {getAllInvitations} from '../services/invitation.service';
