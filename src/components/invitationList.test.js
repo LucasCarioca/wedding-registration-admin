@@ -3,7 +3,7 @@ import {render, screen} from '@testing-library/react';
 import InvitationList from './invitationList';
 import {deleteInvitation} from '../services/invitation.service';
 import userEvent from '@testing-library/user-event';
-import {waitFor} from "@testing-library/dom";
+import {waitFor} from '@testing-library/dom';
 jest.mock('../services/invitation.service', () => ({
   deleteInvitation: jest.fn()
 }));
