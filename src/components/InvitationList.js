@@ -38,7 +38,7 @@ function InvitationList({list, onChange}) {
           <Button
             data-testid="deleteButton-disabled"
             variant="contained"
-            disabled="disabled"
+            disabled={true}
           >
             Delete
           </Button>
