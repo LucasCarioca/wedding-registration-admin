@@ -46,7 +46,6 @@ jobs:
             type=raw,v${{ steps.package-version.outputs.current-version}}
           flavor: |
             latest=true
-
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
@@ -55,3 +54,14 @@ jobs:
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+      - name: Install Kubectl
+        uses: azure/setup-kubectl@v1
+      - name: Setup Context
+        uses: azure/k8s-set-context@v1
+        with:
+          method: kubeconfig
+          kubeconfig: ${{ secrets.HOME_LAB_KUBE_CONFIG }}
+      - name: Deploy Application
+        run: kubectl apply -f homelab.yaml
+      - name: Set Image
+        run: kubectl set image deployments/wedding-registration-admin-deployment -n wedding wedding-registration-admin=ghcr.io/lucascarioca/wedding-registration-admin:v${{ steps.package-version.outputs.current-version}}
