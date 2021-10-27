@@ -1,3 +1,11 @@
+## [0.1.7](https://github.com/LucasCarioca/wedding-registration-admin/compare/v0.1.6...v0.1.7) (2021-10-27)
+
+
+### Bug Fixes
+
+* testing new release workflow ([79b2e04](https://github.com/LucasCarioca/wedding-registration-admin/commit/79b2e0451efebc2fb504a70194af042591b9f70b))
+* testing new release workflow ([2a69bf9](https://github.com/LucasCarioca/wedding-registration-admin/commit/2a69bf92492d470e6aac98f0e53282c65d73eaf4))
+
 ## [0.1.6](https://github.com/LucasCarioca/wedding-registration-admin/compare/v0.1.5...v0.1.6) (2021-10-27)
 
 
