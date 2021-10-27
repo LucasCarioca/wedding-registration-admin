@@ -28,7 +28,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint \"**/*.js\"",
-    "lint:fix": "eslint \"**/*.js\" --fix"
+    "lint:fix": "eslint \"**/*.js\" --fix",
+    "release": "semantic-release"
   },
   "eslintConfig": {
     "extends": [
@@ -49,7 +50,14 @@
     ]
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.0",
+    "@semantic-release/commit-analyzer": "^9.0.1",
+    "@semantic-release/exec": "^6.0.1",
+    "@semantic-release/git": "^10.0.0",
+    "@semantic-release/github": "^8.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.2",
     "eslint-config-google": "^0.14.0",
-    "eslint-plugin-react": "^7.26.1"
+    "eslint-plugin-react": "^7.26.1",
+    "semantic-release": "^18.0.0"
   }
 }
