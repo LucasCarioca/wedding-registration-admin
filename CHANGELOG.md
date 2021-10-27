@@ -1,3 +1,10 @@
+## [0.1.12](https://github.com/LucasCarioca/wedding-registration-admin/compare/v0.1.11...v0.1.12) (2021-10-27)
+
+
+### Bug Fixes
+
+* update tagging ([ceae48a](https://github.com/LucasCarioca/wedding-registration-admin/commit/ceae48abbb61a8a15a4be0d0e01cfbdd2bdc35e3))
+
 ## [0.1.11](https://github.com/LucasCarioca/wedding-registration-admin/compare/v0.1.10...v0.1.11) (2021-10-27)
 
 
