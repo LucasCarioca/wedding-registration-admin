@@ -2,15 +2,11 @@ name: CICD
 on:
   push:
 jobs:
-  t:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "${{ github.ref }}
   ci:
     uses: LucasCarioca/workflows/.github/workflows/ci-yarn.yml@v0.1.1
   release:
     needs: ci
-    if: github.ref == 'ref/head/main'
+    if: github.ref == 'ref/heads/main'
     uses: LucasCarioca/workflows/.github/workflows/release-homelab-yarn.yml@v0.1.1
     with:
       registry: ghcr.io
