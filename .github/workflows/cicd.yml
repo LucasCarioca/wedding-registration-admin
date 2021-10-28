@@ -6,7 +6,7 @@ jobs:
     uses: LucasCarioca/workflows/.github/workflows/ci-yarn.yml@v0.1.1
   release:
     needs: ci
-    if: github.ref == 'ref/head/master'
+    if: github.ref == 'ref/head/main'
     uses: LucasCarioca/workflows/.github/workflows/release-homelab-yarn.yml@v0.1.1
     with:
       registry: ghcr.io
