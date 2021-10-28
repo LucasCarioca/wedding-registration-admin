@@ -1,0 +1,19 @@
+name: CICD
+on:
+  push:
+    branches: ['main']
+jobs:
+  ci:
+    uses: LucasCarioca/workflows/.github/workflows/ci-yarn.yml@v0.1.1
+  release:
+    uses: LucasCarioca/workflows/.github/workflows/release-homelab-yarn.yml@v0.1.1
+    with:
+      registry: ghcr.io
+      image_name: lucascarioca/wedding-registration-admin
+      deployment: wedding-registration-admin-deployment
+      container: wedding-registration-admin
+      namespace: wedding
+    secrets:
+      kube_config: ${{ secrets.HOME_LAB_KUBE_CONFIG }}
+      username: ${{ github.actor }}
+      password: ${{ secrets.GITHUB_TOKEN }}
