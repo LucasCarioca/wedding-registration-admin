@@ -9,10 +9,10 @@ jobs:
   release:
     uses: LucasCarioca/workflows/.github/workflows/release-homelab-yarn.yml@v0.0.0
     with:
-      registry: ${{ env.REGISTRY }}
-      image_name: ${{ env.IMAGE_NAME }}
-      deployment: ${{ env.IMAGE_NAME }}-deployment
-      container: ${{ env.IMAGE_NAME }}
+      registry: ghcr.io
+      image_name: wedding-registration-admin
+      deployment: wedding-registration-admin-deployment
+      container: wedding-registration-admin
       namespace: wedding
     secrets:
       kube_config: ${{ secrets.HOME_LAB_KUBE_CONFIG }}
