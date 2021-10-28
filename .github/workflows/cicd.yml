@@ -2,6 +2,9 @@ name: CICD
 on:
   push:
 jobs:
+  t:
+    steps:
+      - run: echo "${{ github.ref }}
   ci:
     uses: LucasCarioca/workflows/.github/workflows/ci-yarn.yml@v0.1.1
   release:
