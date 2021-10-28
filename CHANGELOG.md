@@ -1,3 +1,12 @@
+## [0.1.16](https://github.com/LucasCarioca/wedding-registration-admin/compare/v0.1.15...v0.1.16) (2021-10-28)
+
+
+### Bug Fixes
+
+* testing with new pipeline ([54b7069](https://github.com/LucasCarioca/wedding-registration-admin/commit/54b706904d74ed6f88962844c79e1b3d3f5d56e9))
+* testing with new pipeline ([0b95bcb](https://github.com/LucasCarioca/wedding-registration-admin/commit/0b95bcb2d847440fb0ca9e498e35257a62ecdd36))
+* testing with new pipeline ([ed22399](https://github.com/LucasCarioca/wedding-registration-admin/commit/ed22399d92a37842ae0feada775d3932b5bd899c))
+
 ## [0.1.15](https://github.com/LucasCarioca/wedding-registration-admin/compare/v0.1.14...v0.1.15) (2021-10-27)
 
 
