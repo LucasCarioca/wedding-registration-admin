@@ -23,6 +23,7 @@ function NavBar() {
           <div style={{flexGrow: '1'}}>
             <StyledLink to="/"><Button color="inherit">Home</Button></StyledLink>
             <StyledLink to="/invitations"><Button color="inherit">Invitations</Button></StyledLink>
+            <StyledLink to="/invitation-cards"><Button color="inherit">cards</Button></StyledLink>
           </div>
           <Login/>
         </Toolbar>
