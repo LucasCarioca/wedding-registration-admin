@@ -5,3 +5,8 @@
 html, body {
   background: whitesmoke;
 }
+
+.styled-nav-link {
+  color: inherit;
+  text-decoration: inherit;
+}
