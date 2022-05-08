@@ -8,7 +8,7 @@ export async function getAllInvitations() {
   return res.data;
 }
 
-export async function createInvitation(name, message, guestCount) {
+export async function createInvitation(name, message, email, phone, guestCount) {
   const apiKey = getAPIKey();
   const host = getHost();
   await axios.post(
@@ -16,6 +16,8 @@ export async function createInvitation(name, message, guestCount) {
     {
       name,
       message,
+      email,
+      phone,
       guest_count: guestCount
     }
   );

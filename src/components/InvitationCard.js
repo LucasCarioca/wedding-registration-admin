@@ -4,7 +4,7 @@ import {getGuestRegistrationHost} from '../config';
 import QRCode from 'react-qr-code';
 
 function InvitationCard({name, registrationKey, guestCount}) {
-  const url = `${getGuestRegistrationHost()}/registrations/${registrationKey}`;
+  const url = `${getGuestRegistrationHost()}/invitations/${registrationKey}`;
   return (
     <>
       <Paper style={{padding: '2rem', margin: '1rem', textAlign: 'center'}}>
