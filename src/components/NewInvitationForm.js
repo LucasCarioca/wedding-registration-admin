@@ -5,7 +5,7 @@ import {createInvitation} from '../services/invitation.service';
 
 function NewInvitationForm({onSubmit}) {
   const submit = (values) => {
-    createInvitation(values.name, values.guestCount).then(() => {
+    createInvitation(values.name, values.message, values.guestCount).then(() => {
       onSubmit();
     }).catch((error) => console.error(error));
   };
@@ -14,6 +14,7 @@ function NewInvitationForm({onSubmit}) {
       <Formik
         initialValues={{
           name: '',
+          message: '',
           guestCount: 0
         }}
         onSubmit={submit}
@@ -21,7 +22,7 @@ function NewInvitationForm({onSubmit}) {
         {(formik) => (
           <Form>
             <Grid container spacing={2}>
-              <Grid item md={6} xs={12}>
+              <Grid item md={8} xs={12}>
                 <TextField
                   {...formik.getFieldProps('name')}
                   label="Invitation Name"
@@ -29,11 +30,19 @@ function NewInvitationForm({onSubmit}) {
                   style={{width: '90%'}}
                 />
               </Grid>
-              <Grid item md={2} xs={12}>
+              <Grid item md={4} xs={12}>
                 <TextField
                   type="number"
                   {...formik.getFieldProps('guestCount')}
                   label="Guest Count"
+                  variant="outlined"
+                  style={{width: '90%'}}
+                />
+              </Grid>
+              <Grid item md={8} xs={12}>
+                <TextField
+                  {...formik.getFieldProps('message')}
+                  label="Invitation Message"
                   variant="outlined"
                   style={{width: '90%'}}
                 />
@@ -46,7 +55,7 @@ function NewInvitationForm({onSubmit}) {
                   size="large"
                   style={{margin: '.5rem 0', width: '90%'}}
                 >
-                                    Add
+                  Add
                 </Button>
               </Grid>
             </Grid>
