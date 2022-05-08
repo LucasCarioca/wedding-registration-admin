@@ -5,7 +5,7 @@ import {createInvitation} from '../services/invitation.service';
 
 function NewInvitationForm({onSubmit}) {
   const submit = (values) => {
-    createInvitation(values.name, values.message, values.guestCount).then(() => {
+    createInvitation(values.name, values.message, values.email, values.phone, values.guestCount).then(() => {
       onSubmit();
     }).catch((error) => console.error(error));
   };
@@ -15,6 +15,8 @@ function NewInvitationForm({onSubmit}) {
         initialValues={{
           name: '',
           message: '',
+          email: '',
+          phone: '',
           guestCount: 0
         }}
         onSubmit={submit}
@@ -22,7 +24,7 @@ function NewInvitationForm({onSubmit}) {
         {(formik) => (
           <Form>
             <Grid container spacing={2}>
-              <Grid item md={8} xs={12}>
+              <Grid item md={4} xs={12}>
                 <TextField
                   {...formik.getFieldProps('name')}
                   label="Invitation Name"
@@ -30,7 +32,15 @@ function NewInvitationForm({onSubmit}) {
                   style={{width: '90%'}}
                 />
               </Grid>
-              <Grid item md={4} xs={12}>
+              <Grid item md={6} xs={12}>
+                <TextField
+                  {...formik.getFieldProps('message')}
+                  label="Invitation Message"
+                  variant="outlined"
+                  style={{width: '90%'}}
+                />
+              </Grid>
+              <Grid item md={2} xs={12}>
                 <TextField
                   type="number"
                   {...formik.getFieldProps('guestCount')}
@@ -39,14 +49,26 @@ function NewInvitationForm({onSubmit}) {
                   style={{width: '90%'}}
                 />
               </Grid>
+
               <Grid item md={8} xs={12}>
                 <TextField
-                  {...formik.getFieldProps('message')}
-                  label="Invitation Message"
+                  {...formik.getFieldProps('email')}
+                  label="Email"
                   variant="outlined"
                   style={{width: '90%'}}
                 />
               </Grid>
+              <Grid item md={4} xs={12}>
+                <TextField
+                  type="text"
+                  {...formik.getFieldProps('phone')}
+                  label="Phone Number"
+                  variant="outlined"
+                  style={{width: '90%'}}
+                />
+              </Grid>
+
+              <Grid item md={8} xs={12}/>
               <Grid item md={4} xs={12}>
                 <Button
                   type="submit"

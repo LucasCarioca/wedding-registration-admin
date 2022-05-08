@@ -6,10 +6,11 @@ import {deleteInvitation} from '../services/invitation.service';
 function InvitationList({list, onChange}) {
   const [selectedList, setSelectedList] = useState([]);
   const columns = [
-    {field: 'id', headerName: 'ID', width: 30},
     {field: 'name', headerName: 'Name', width: 200},
-    {field: 'guest_count', headerName: 'Guest Count', width: 200},
-    {field: 'registration_key', headerName: 'Registration Key', width: 400},
+    {field: 'guest_count', headerName: 'Guests', width: 100},
+    {field: 'email', headerName: 'Email', width: 250},
+    {field: 'phone', headerName: 'Phone', width: 150},
+    {field: 'registration_key', headerName: 'Key', width: 300},
   ];
   const handleSelection = (s) => {
     setSelectedList(s);
