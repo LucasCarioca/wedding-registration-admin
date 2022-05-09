@@ -16,12 +16,18 @@ describe('invitation.service', function() {
   });
   it('should create an invitation', function() {
     const expectedName = 'testName';
+    const message = 'testmessage';
     const expectedGuestCount = 3;
+    const email = 'test@test.com';
+    const phone = '1234567890';
     axios.post.mockResolvedValueOnce();
-    createInvitation(expectedName, expectedGuestCount);
+    createInvitation(expectedName, message, email, phone, expectedGuestCount);
     expect(axios.post).toHaveBeenCalledWith('http://localhost:8081/api/v1/invitations?api_key=null', {
       name: expectedName,
-      guest_count: expectedGuestCount
+      guest_count: expectedGuestCount,
+      message,
+      email,
+      phone,
     });
   });
   it('should create an invitation', function() {
