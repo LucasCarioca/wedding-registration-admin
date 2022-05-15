@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: wedding
+  name: wedding-admin
+  labels:
+    app: wedding-admin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wedding-admin
+  template:
+    metadata:
+      labels:
+        app: wedding-admin
+    spec:
+      containers:
+        - name: wedding-admin
+          image: ghcr.io/lucascarioca/wedding-registration-admin:latest
+          ports:
+            - containerPort: 80
+              name: w-r-a-http
