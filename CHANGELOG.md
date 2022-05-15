@@ -1,3 +1,10 @@
+## [0.2.3](https://github.com/LucasCarioca/wedding-registration-admin/compare/v0.2.2...v0.2.3) (2022-05-15)
+
+
+### Bug Fixes
+
+* bump BREAKING CHANGE: bump ([9bffaad](https://github.com/LucasCarioca/wedding-registration-admin/commit/9bffaadab566426457eaf4a01baac7595d17e0c4))
+
 # [0.2.0](https://github.com/LucasCarioca/wedding-registration-admin/compare/v0.1.5...v0.2.0) (2022-05-15)
 
 
