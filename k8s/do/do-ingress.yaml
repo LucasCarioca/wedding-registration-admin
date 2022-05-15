@@ -31,4 +31,4 @@ spec:
     - hosts:
         - wedding-admin.ldkube.com
         - admin.karenandlucas.com
-      secretName: wedding-tls
+      secretName: wedding-admin-tls
