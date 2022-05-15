@@ -1,6 +1,6 @@
 name: Promote -> DO
 on:
-  push:
+  workflow_dispatch:
 jobs:
   release:
     if: github.ref == 'refs/heads/main'
