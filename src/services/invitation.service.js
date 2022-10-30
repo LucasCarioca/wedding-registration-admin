@@ -1,6 +1,13 @@
 import axios from 'axios';
 import {getAPIKey, getHost} from '../config';
 
+export async function getAllGuests() {
+  const apiKey = getAPIKey();
+  const host = getHost();
+  const res = await axios.get(`${host}/api/v1/guests?api_key=${apiKey}`);
+  return res.data;
+}
+
 export async function getAllInvitations() {
   const apiKey = getAPIKey();
   const host = getHost();

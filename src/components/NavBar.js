@@ -28,6 +28,16 @@ function NavBar() {
               </ListItem>
             </Link>
             <Divider/>
+            <Link className="styled-nav-link" to="/guests">
+              <ListItem>
+                <ListItemIcon>
+                  <AppsIcon/>
+                </ListItemIcon>
+                <ListItemText>
+                  Guests
+                </ListItemText>
+              </ListItem>
+            </Link>
             <Link className="styled-nav-link" to="/invitations">
               <ListItem>
                 <ListItemIcon>
