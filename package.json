@@ -58,6 +58,6 @@
     "@semantic-release/release-notes-generator": "^10.0.2",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-react": "^7.26.1",
-    "semantic-release": "^18.0.0"
+    "semantic-release": "^19.0.3"
   }
 }
