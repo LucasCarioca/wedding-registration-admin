@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/LucasCarioca/wedding-registration-admin/compare/v0.2.3...v0.3.0) (2022-10-30)
+
+
+### Features
+
+* adding count of guests ([2e0c843](https://github.com/LucasCarioca/wedding-registration-admin/commit/2e0c843b497c0c27c4f4751387174996d17f085a))
+
 ## [0.2.3](https://github.com/LucasCarioca/wedding-registration-admin/compare/v0.2.2...v0.2.3) (2022-05-15)
 
 
