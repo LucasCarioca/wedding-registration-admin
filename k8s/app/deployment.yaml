@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: wedding-admin
-          image: ghcr.io/lucascarioca/wedding-registration-admin-do:latest
+          image: ghcr.io/lucascarioca/wedding-registration-admin:v0.3.1
           ports:
             - containerPort: 80
               name: w-r-a-http
