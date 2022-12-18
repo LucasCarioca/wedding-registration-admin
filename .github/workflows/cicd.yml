@@ -4,3 +4,14 @@ on:
 jobs:
   ci:
     uses: LucasCarioca/workflows/.github/workflows/ci-yarn.yml@v0.5.1
+  release:
+    if: github.ref == 'refs/heads/main'
+    needs: [ci]
+    uses: LucasCarioca/workflows/.github/workflows/release-yarn-docker.yml@v0.9.9
+    with:
+      registry: ghcr.io
+      image_name: lucascarioca/wedding-registration-admin
+      env_file: prod.env
+    secrets:
+      username: ${{ github.actor }}
+      password: ${{ secrets.GITHUB_TOKEN }}
