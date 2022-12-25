@@ -1,3 +1,15 @@
+# [0.4.0](https://github.com/LucasCarioca/wedding-registration-admin/compare/v0.3.1...v0.4.0) (2022-12-25)
+
+
+### Bug Fixes
+
+* workflow ([9d570bf](https://github.com/LucasCarioca/wedding-registration-admin/commit/9d570bf7f5f45644ae1f462707c9c2e1ce7dedc2))
+
+
+### Features
+
+* complete rewrite to nextjs ([#11](https://github.com/LucasCarioca/wedding-registration-admin/issues/11)) ([35f5cad](https://github.com/LucasCarioca/wedding-registration-admin/commit/35f5cad429279414cfb12c5e1509de01f2503b67))
+
 ## [0.3.1](https://github.com/LucasCarioca/wedding-registration-admin/compare/v0.3.0...v0.3.1) (2022-12-18)
 
 
