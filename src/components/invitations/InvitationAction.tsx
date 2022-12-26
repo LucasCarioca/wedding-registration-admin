@@ -8,7 +8,7 @@ type props = {
 }
 
 export default function InvitationAction({apiKey, id}: props) {
-    const {push} = useRouter()
+    const {push, reload} = useRouter()
     const [error, setError] = useState('')
     const handleAction = async (instruction: 'guest_count_increase' | 'guest_count_decrease' | 'declined') => {
         const response = await updateInvitation(apiKey, id, instruction)
