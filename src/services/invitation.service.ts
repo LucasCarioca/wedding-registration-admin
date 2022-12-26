@@ -7,8 +7,13 @@ export async function searchInvitation(value: string) {
     return await res.json()
 }
 
-export async function getInvitation(key: string) {
-    const res = await fetch(`${host}/api/v1/invitations?registration_key=${key}`)
+export async function getInvitation(key: string, id: string) {
+    const res = await fetch(`${host}/api/v1/invitations/${id}?api_key=${key}`)
+    return await res.json()
+}
+
+export async function deleteInvitation(key: string, id: string) {
+    const res = await fetch(`${host}/api/v1/invitations/${id}?api_key=${key}`, {method: 'DELETE'})
     return await res.json()
 }
 

@@ -31,7 +31,7 @@ export default function InvitationsPage({apiKey, invitations}: props) {
         <ul>
             {invitations.map((invitation, i) => (
                 <li key={i}><Link
-                    href={`/invitations/${invitation.registration_key}?api_key=${apiKey}`}>{invitation.name}({invitation.guest_count})</Link>: {invitation.phone} / {invitation.email}
+                    href={`/invitations/${invitation.id}?api_key=${apiKey}`}>{invitation.name}({invitation.guest_count})</Link>: {invitation.phone} / {invitation.email}
                 </li>
             ))}
         </ul>
