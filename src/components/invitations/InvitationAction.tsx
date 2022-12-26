@@ -32,5 +32,7 @@ export default function InvitationAction({apiKey, id}: props) {
         <br/>
         <br/>
         <button onClick={handleDelete}>DELETE</button>
+        <br/>
+        {error !== '' && (<p style={{color: 'red'}}>{error}</p>)}
     </>)
 }
