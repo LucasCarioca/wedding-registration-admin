@@ -1,3 +1,16 @@
+# [0.5.0](https://github.com/LucasCarioca/wedding-registration-admin/compare/v0.4.0...v0.5.0) (2022-12-26)
+
+
+### Bug Fixes
+
+* add back relead ([eac2578](https://github.com/LucasCarioca/wedding-registration-admin/commit/eac2578ece3ad0c9e22ec2eae604b619b06e41d2))
+* add error text ([ad1a279](https://github.com/LucasCarioca/wedding-registration-admin/commit/ad1a27950ce73a63a6ce9d69bdd5f82048a78484))
+
+
+### Features
+
+* add delete option ([6bf318b](https://github.com/LucasCarioca/wedding-registration-admin/commit/6bf318b028c6d98a2dd177ef51d7c3b3d9705d10))
+
 # [0.4.0](https://github.com/LucasCarioca/wedding-registration-admin/compare/v0.3.1...v0.4.0) (2022-12-25)
 
 
