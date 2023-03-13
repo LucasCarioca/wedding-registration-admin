@@ -23,7 +23,6 @@ export async function getAllInvitations(key: string) {
 }
 
 export async function createInvitation(key: string, name: string, email: string, phone: string, guest_count: number) {
-    const host = getHost();
     const res = await fetch(
         `${host}/api/v1/invitations?api_key=${key}`,
         {
@@ -42,7 +41,6 @@ export async function createInvitation(key: string, name: string, email: string,
 }
 
 export async function updateInvitation(key: string, id: string, instruction: 'guest_count_increase' | 'guest_count_decrease' | 'declined') {
-    const host = getHost();
     const res = await fetch(
         `${host}/api/v1/invitations/${id}?api_key=${key}`,
         {
