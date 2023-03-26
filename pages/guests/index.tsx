@@ -25,7 +25,7 @@ export default function GuestsPage({apiKey, guests}: props) {
         <ul>
             {guests.map((guest, i) => (
                 <li key={i}>
-                    <Link href={`/invitations/${guest.invitation.registration_key}?api_key=${apiKey}`}>
+                    <Link href={`/invitations/${guest.invitation.id}?api_key=${apiKey}`}>
                         {guest.invitation.name}
                     </Link>: {guest.first_name} {guest.last_name}
                 </li>
