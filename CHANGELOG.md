@@ -1,3 +1,10 @@
+## [0.5.2](https://github.com/LucasCarioca/wedding-registration-admin/compare/v0.5.1...v0.5.2) (2023-03-26)
+
+
+### Bug Fixes
+
+* use invitation id instead of registration key ([00f3645](https://github.com/LucasCarioca/wedding-registration-admin/commit/00f3645b8b69fea47abcca0cd72a011288b1d856))
+
 ## [0.5.1](https://github.com/LucasCarioca/wedding-registration-admin/compare/v0.5.0...v0.5.1) (2023-03-13)
 
 
